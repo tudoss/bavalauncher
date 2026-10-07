@@ -1,0 +1,32 @@
+{
+  "name": "bava-launcher",
+  "version": "1.0.0",
+  "description": "BavaLauncher — Minecraft Launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "devDependencies": {
+    "electron": "^31.7.7",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "build": {
+    "appId": "com.bavaclient.launcher",
+    "productName": "BavaLauncher",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "allowScripts": {
+    "electron@31.7.7": true
+  }
+}
